@@ -1,6 +1,7 @@
 import { useState } from "react";
 import "./App.css";
 import Posts from "./components/Posts";
+import PostById from "./components/PostById";
 
 function App() {
   const [toggle, setToggle] = useState(false);
@@ -8,6 +9,7 @@ function App() {
     <>
       <button onClick={() => setToggle((prev) => !prev)}>Toggle</button>
       {toggle && <Posts />}
+      <PostById id={3} />
     </>
   );
 }
